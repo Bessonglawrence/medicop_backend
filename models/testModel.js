@@ -8,11 +8,11 @@ const testSchema = new Schema({
         type: String,
         required: true
     },
-    name: {
+    testName: {
         type: String,
         required: true
     },
-    price:{
+    testPrice:{
         type: Number,
         required: true
     }

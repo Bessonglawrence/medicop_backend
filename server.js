@@ -4,8 +4,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 // Custom methods imports
-const testModel = require('./models/testModel')
-
+const TestRoutes = require('./routes/tests');
+const InvoiceRoutes = require('./routes/tests');
 
 // App initialisation and middleware
 const app = express();
@@ -17,31 +17,11 @@ app.use((req, res, next) =>{
     next();
 })
 
-// Routes
-app.get('/', async (req, res) => {
-    try{
-        let test = await testModel.find({})
-        // .limit(50)
-        // .sort({createdAt: -1})
+// Test Routes
+app.use('/api', TestRoutes);
 
-        res.status(200).json(test);
-    }
-    catch (error) {
-        res.status(500).json({error: error.body})
-    }
-})
-
-app.post('/', async(req, res) => {
-    const { category, name, price} = req.body;
-
-    try{
-        const test = await testModel.create({category,name,price})
-        res.status(200).json(test);
-    } catch(error){
-        res.status(500).json({error: error.body})
-    }
-
-})
+// Invoice Routes
+//app.use('/api/invoice', InvoiceRoutes)
 
 
 //Connect to Database and listening to PORT

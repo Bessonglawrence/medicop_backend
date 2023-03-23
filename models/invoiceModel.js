@@ -9,29 +9,29 @@ const invoiceSchema = new Schema({
     },
     email:{
         type: String,
-        required: true
+        require: true
     },
     number:{
         type: Number,
-        required: true
-    },
-    date:{
-        type: Date,
-        required: true,
-        min: Date.now,
-    },
-    time:{
-        type: Date,
-        default: Date.now,
-        required: true
+        require: true
     },
     tests:[
         {
-            category: String,
-            testName: String,
-            testPrice: Number,
+            category:{
+                type: String,
+            },
+            testName:{
+                type: String,
+            },
+            testPrice:{
+                type: Number,
+            }
         }
-    ]
+    ],
+    invoicePrice:{
+        type: Number,
+        require: true
+    }
 
 },{timestamps: true})
 
