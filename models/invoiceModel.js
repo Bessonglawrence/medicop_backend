@@ -15,11 +15,12 @@ const invoiceSchema = new Schema({
         type: Number,
         require: true
     },
+    total:{
+        type: Number,
+        require: true
+    },
     tests:[
         {
-            category:{
-                type: String,
-            },
             testName:{
                 type: String,
             },
@@ -27,11 +28,7 @@ const invoiceSchema = new Schema({
                 type: Number,
             }
         }
-    ],
-    invoicePrice:{
-        type: Number,
-        require: true
-    }
+    ]
 
 },{timestamps: true})
 
