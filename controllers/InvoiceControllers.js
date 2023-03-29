@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 // GET all Invoices
 
 const getInvoices = async (req, res) =>{
-    res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.set('Access-Control-Allow-Origin','*');
  try{
     const invoices = await InvoiceModel.find({}).sort({createdAt: -1});
     res.status(200).json(invoices)
