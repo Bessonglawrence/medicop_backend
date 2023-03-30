@@ -21,10 +21,13 @@ const invoiceSchema = new Schema({
     },
     tests:[
         {
-            testName:{
+            id:{
+                type: Number
+            },
+            name:{
                 type: String,
             },
-            testPrice:{
+            price:{
                 type: Number,
             }
         }
