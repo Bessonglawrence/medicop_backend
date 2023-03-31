@@ -55,6 +55,18 @@ const invoiceSchema = new Schema({
                 price:{
                     type: Number,
                 }
+            }],
+
+            dopplerUltraSounds:[{
+                id:{
+                    type: Number
+                },
+                name:{
+                    type: String,
+                },
+                price:{
+                    type: Number,
+                }
             }]
     }
 
