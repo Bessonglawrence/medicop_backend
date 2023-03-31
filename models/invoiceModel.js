@@ -21,7 +21,7 @@ const invoiceSchema = new Schema({
     },
     tests:{
         
-            bloodTest:[{
+            bloodTests:[{
                 id:{
                     type: Number
                 },
@@ -33,7 +33,7 @@ const invoiceSchema = new Schema({
                 }
             }],
         
-            boneTest:[{
+            boneTests:[{
                 id:{
                     type: Number
                 },
@@ -45,7 +45,7 @@ const invoiceSchema = new Schema({
                 }
             }],
        
-            ultraSound:[{
+            ultraSounds:[{
                 id:{
                     type: Number
                 },
