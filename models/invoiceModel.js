@@ -21,7 +21,7 @@ const invoiceSchema = new Schema({
     },
     tests:{
         
-            bloodTests:[{
+            xRayTests:[{
                 id:{
                     type: Number
                 },
