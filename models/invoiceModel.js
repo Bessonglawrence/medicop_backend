@@ -67,7 +67,31 @@ const invoiceSchema = new Schema({
                 price:{
                     type: Number,
                 }
-            }]
+            }],
+
+            specialProcedure:[{
+                id:{
+                    type: Number
+                },
+                name:{
+                    type: String,
+                },
+                price:{
+                    type: Number,
+                }
+            }],
+            
+            cardiologyTests:[{
+                id:{
+                    type: Number
+                },
+                name:{
+                    type: String,
+                },
+                price:{
+                    type: Number,
+                }
+            }],
     }
 
 },{timestamps: true})
