@@ -32,7 +32,6 @@ const invoiceSchema = new Schema({
                     type: Number,
                 }
             }],
-    
         
             boneTest:[{
                 id:{
@@ -46,7 +45,6 @@ const invoiceSchema = new Schema({
                 }
             }],
        
-        
             ultraSound:[{
                 id:{
                     type: Number
@@ -58,7 +56,6 @@ const invoiceSchema = new Schema({
                     type: Number,
                 }
             }]
-        
     }
 
 },{timestamps: true})
