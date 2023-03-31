@@ -19,21 +19,21 @@ const invoiceSchema = new Schema({
         type: Number,
         require: true
     },
-    tests:[
-        {
+    tests:{
+        
             bloodTest:[{
-            id:{
-                type: Number
-            },
-            name:{
-                type: String,
-            },
-            price:{
-                type: Number,
-            }
-        }],
-    },
-        {
+                id:{
+                    type: Number
+                },
+                name:{
+                    type: String,
+                },
+                price:{
+                    type: Number,
+                }
+            }],
+    
+        
             boneTest:[{
                 id:{
                     type: Number
@@ -45,8 +45,8 @@ const invoiceSchema = new Schema({
                     type: Number,
                 }
             }],
-        },
-        {
+       
+        
             ultraSound:[{
                 id:{
                     type: Number
@@ -58,8 +58,8 @@ const invoiceSchema = new Schema({
                     type: Number,
                 }
             }]
-        }
-    ]
+        
+    }
 
 },{timestamps: true})
 
