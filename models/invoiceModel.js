@@ -33,7 +33,7 @@ const invoiceSchema = new Schema({
                 }
             }],
         
-            boneTests:[{
+            ctScanTests:[{
                 id:{
                     type: Number
                 },
