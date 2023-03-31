@@ -69,7 +69,7 @@ const invoiceSchema = new Schema({
                 }
             }],
 
-            specialProcedure:[{
+            specialProcedures:[{
                 id:{
                     type: Number
                 },
