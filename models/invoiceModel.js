@@ -19,9 +19,9 @@ const invoiceSchema = new Schema({
         type: Number,
         require: true
     },
-    pending:{
+    done:{
         type: Boolean,
-        default: true
+        default: false
     },
     tests:{
         
