@@ -19,6 +19,10 @@ const invoiceSchema = new Schema({
         type: Number,
         require: true
     },
+    pending:{
+        type: Boolean,
+        default: true
+    },
     tests:{
         
             xRayTests:[{

@@ -7,6 +7,8 @@ const cors = require('cors');
 // Custom methods imports
 const TestRoutes = require('./routes/tests');
 const InvoiceRoutes = require('./routes/tests');
+const UserRoutes = require('./routes/user')
+
 
 // App initialisation and middleware
 const app = express();
@@ -25,6 +27,9 @@ app.use((req, res, next) =>{
 
 // Test Routes
 app.use('/api', TestRoutes);
+
+// Authentication Routes
+app.use('/api/user', UserRoutes);
 
 // Invoice Routes
 //app.use('/api/invoice', InvoiceRoutes)
