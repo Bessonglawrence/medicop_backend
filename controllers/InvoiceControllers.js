@@ -28,8 +28,40 @@ const createInvoice = async (req, res) =>{
     }
 }
 
+// UPDATE an Invoice
+
+const updateInvoice = async(req, res) =>{
+    const {id} = req.params;
+
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({error: "No such workout"})
+    }
+    const invoice = await InvoiceModel.findOneAndUpdate({_id: id},{...req.body})
+    if(!invoice){
+        return res.status(404).json({error: "Workout doesn't exist"})
+    }
+    res.status(200).json(invoice)
+}
+
+// GET a single Invoice
+
+const getInvoice = async (req, res) => {
+    const { id } = req.params; 
+
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        res.status(404).json({error: "No such workout"})
+    }
+    const invoice = await InvoiceModel.findById(id)
+    if(!invoice){
+        return res.status(500).json({error: "Workout doesn't exist"})
+    }
+    res.status(200).json(invoice);
+}
+
 
 module.exports = {
     getInvoices,
-    createInvoice
+    createInvoice,
+    getInvoice,
+    updateInvoice
 }
