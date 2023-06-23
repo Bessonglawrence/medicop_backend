@@ -9,7 +9,6 @@ const invoiceSchema = new Schema({
     },
     email:{
         type: String,
-        require: true
     },
     number:{
         type: Number,

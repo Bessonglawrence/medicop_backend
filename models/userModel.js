@@ -23,7 +23,7 @@ const userSchema = new Schema({
 
 // Static SignUp method
 
-userSchema.statics.signup = async function(email, password){
+userSchema.statics.signup = async function(email, password, username){
     const exist = await this.findOne({email});
 
     // Validation
